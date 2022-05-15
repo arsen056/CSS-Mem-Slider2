@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    width: 100%;
+    height: 100vh;
+    padding: 5rem;
+    background: #A6D2AC;
+}
+
+input {
+    display: none;
+}
+
+label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.3rem;
+    height: 2.3rem;
+    cursor: pointer;   
+    margin: 0.2rem;
+}
+
+.label {
+    width: 1.3rem;
+    height: 1.3rem;
+    border: 2px solid #666;
+    border-radius: 50%;
+    transition: all 0.2s linear; 
+}
+
+.label:hover {
+    background-color: #DFCA6B;
+}
+
+
+#slide1:checked ~ .slider .controls label .label1 {
+    background-color: #DFCA6B;
+}
+
+#slide2:checked ~ .slider .controls label .label2 {
+    background-color: #DFCA6B;
+}
+
+#slide3:checked ~ .slider .controls label .label3 {
+    background-color: #DFCA6B;
+}
+
+#slide4:checked ~ .slider .controls label .label4 {
+    background-color: #DFCA6B;
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 3%;
+}
+
+.content {
+    width: 400%;
+    height: 100%;
+    display: flex;
+}
+
+.slide {
+    width: 25%;
+    transition: all 0.3s linear;
+}
+
+.slide:nth-child(1) {
+    margin-right: 0%;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3%;
+}
+
+#slide1:checked ~ .slider .container .content .slide:nth-child(1) {
+    margin-right: 0%;
+}
+
+#slide2:checked ~ .slider .container .content .slide:nth-child(1) {
+    margin-right: -25%;
+}
+
+#slide3:checked ~ .slider .container .content .slide:nth-child(1) {
+    margin-right: -50%;
+}
+
+#slide4:checked ~ .slider .container .content .slide:nth-child(1) {
+    margin-right: -75%;
+}
+
+.descriptions {
+    display: flex;
+    width: 400%;
+    text-align: center;
+    margin: 1.5rem 0;    
+    font-size: 2rem;
+}
+
+.descriptions p {
+    width: 25%;
+    background: #A6D2AC;
+    transition: all 0.3s linear;
+}
+
+#slide1:checked ~ .slider .descriptions p:nth-child(1) {
+    margin-right: 0;
+}
+
+#slide2:checked ~ .slider .descriptions p:nth-child(1) {
+    margin-right: -25%;
+}
+
+#slide3:checked ~ .slider .descriptions p:nth-child(1) {
+    margin-right: -50%;
+}
+
+#slide4:checked ~ .slider .descriptions p:nth-child(1) {
+    margin-right: -75%;
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+    
+    label {
+        margin: 0;
+    }
+}
