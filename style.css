@@ -21,8 +21,7 @@ label {
     justify-content: center;
     width: 2.3rem;
     height: 2.3rem;
-    cursor: pointer;
-    transition: background-color 0.2s linear;    
+    cursor: pointer;   
     margin: 0.2rem;
 }
 
@@ -31,6 +30,7 @@ label {
     height: 1.3rem;
     border: 2px solid #666;
     border-radius: 50%;
+    transition: all 0.2s linear; 
 }
 
 .label:hover {
@@ -132,4 +132,14 @@ label {
 
 #slide4:checked ~ .slider .descriptions p:nth-child(1) {
     margin-right: -75%;
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+    
+    label {
+        margin: 0;
+    }
 }
